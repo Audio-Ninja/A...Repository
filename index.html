@@ -2,31 +2,24 @@
 <html>
   <head>
     <title>The Planets</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt|Righteous|Rowdies|Carter One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt|Righteous|Audiowide">
+    
     <style>
     
 body {
-  padding-left: 100px;
-  padding-top: 10px;
-  padding-bottom: 40px;
+  padding-left: 400px;
+  padding-top: 125px;
+  padding-bottom: 50px;
 }
 dl {
   padding-left: 20px;
-  width: 440px;
-  box-shadow: 10px 10px 4px #aaaaaa;
 }
-dl, ul, ol, p {
+dl, .list, ol, p {
   font-family: "Prompt", sans-serif;
   color: hsl(180, 100%, 25%);
 }
-ul {
+.list {
   list-style-type: "-:- ";
-  width: 420px;
-  box-shadow: 10px 10px 4px #aaaaaa;
-}
-ol {
-  width: 420px;
-  box-shadow: 10px 10px 4px #aaaaaa;
 }
 a:not(hover) {
   text-decoration: none;
@@ -34,28 +27,51 @@ a:not(hover) {
 a:hover {
   text-decoration: underline;
 }
-.main, .accent {
+.left, .right {
   height: 860px;
+  width: 300px;
   position: fixed;
   top: 0;
-  right: 0;
   bottom: 0;
+}
+.left {
+  background-color: hsl(200,10%,80%);
   left: 0;
 }
-.main {
-  width: 80px;
-  background-color: hsl(200,10%,80%);
-}
-.accent {
-  width: 20px;
+.right {
   background-color: hsl(220,60%,70%);
+  right: 0;
 }
 h2 {
   font-family: "Righteous", sans-serif;
   color: hsl(230,80%,25%);
 }
-    
+.menu {
+  background-color: hsl(239,89%,23%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 100%;
+}
+.gradient {
+  background-image: linear-gradient(hsl(239,89%,23%, 1),hsl(239,89%,23%, 0));
+  position: fixed;
+  left: 0;
+  top: 8%;
+  height: 20px;
+  width: 100%;
+}
+.title {
+  color: white;
+  position: fixed;
+  left: 2%;
+  top: 0;
+  font-family: "Audiowide",sans-serif;
+}
+  
     </style>
+    
   </head>
 <body>
 
@@ -82,7 +98,7 @@ h2 {
 <p>&nbsp;</p>
 <h2>Pluto's Moons</h2>
 
-<ul>
+<ul class="list">
   <li>Charon</li>
   <li>Nix</li>
   <li>Styx</li>
@@ -105,8 +121,11 @@ h2 {
   <li>Mercury</li>
 </ol>
 
-<div class="main"></div>
-<div class="accent"></div>
+<div class="left"></div>
+<div class="right"></div>
+<div class="menu"></div>
+<div class="gradient"></div>
+<h2 class="title">Astronomy Facts</h2>
 
 </body>
 </html>
