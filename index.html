@@ -14,9 +14,8 @@ body {
 dl {
   padding-left: 20px;
 }
-dl, .list, ol, p {
+dl, .list, ol, p, table {
   font-family: "Prompt", sans-serif;
-  color: hsl(180, 100%, 25%);
 }
 .list {
   list-style-type: "-:- ";
@@ -69,7 +68,15 @@ h2 {
   top: 0;
   font-family: "Audiowide",sans-serif;
 }
-  
+td, th {
+  border: 2px solid #eeeeee;
+  text-align: left;
+  padding: 8px;
+  padding-right: 90px;
+}
+tr:nth-child(even) {
+  background-color: #eeeeee;
+}
     </style>
     
   </head>
@@ -120,6 +127,48 @@ h2 {
   <li>Mars</li>
   <li>Mercury</li>
 </ol>
+<p>&nbsp;</p>
+<h2>The Number of Moons Around Each Planet</h2>
+
+<table>
+  <tr>
+    <th>Planet</th>
+    <th># of Moons</th>
+  </tr>
+  <tr>
+    <td>Mercury</td>
+    <td>0 moons</td>
+  </tr>
+  <tr>
+    <td>Venus</td>
+    <td>0 moons</td>
+  </tr>
+  <tr>
+    <td>Earth</td>
+    <td>1 moon</td>
+  </tr>
+  <tr>
+    <td>Mars</td>
+    <td>2 moons</td>
+  </tr>
+  <tr>
+    <td>Jupiter</td>
+    <td>92 moons</td>
+  </tr>
+  <tr>
+    <td>Saturn</td>
+    <td>83 moons</td>
+  </tr>
+  <tr>
+    <td>Uranus</td>
+    <td>27 moons</td>
+  </tr>
+  <tr>
+    <td>Neptune</td>
+    <td>14 moons</td>
+  </tr>
+</table>
+<p>Source: <a href="https://www.space.com/jupiter-moon-discoveries-total-92" target="_blank">Space.com</a></p>
 
 <div class="left"></div>
 <div class="right"></div>
