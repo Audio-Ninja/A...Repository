@@ -6,8 +6,9 @@
 <style>
 .grid-container {
   display: grid;
+  row-gap: 10px;
   grid-template-columns: 20% 5% 50% 5% 20%;
-  grid-template-rows: 60px 30px 40px 75px 450px 75px 350px 30px;
+  grid-template-rows: 60px 30px 40px auto auto auto auto auto auto 40px 30px;
   padding: 10px;
 }
 .head {
@@ -19,11 +20,17 @@
   font-size: 30px;
 }
 .left {
-  background-color: hsl(200,10%,80%);
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fc/1920x1200-space-free-kd3592201.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   grid-area: 2 / 1 / -1 / 2;
 }
 .right {
-  background-color: hsl(220,60%,70%);
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fc/1920x1200-space-free-kd3592201.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   grid-area: 2 / 5 / -1 / 6;
 }
 .foot {
@@ -42,14 +49,14 @@
   grid-area: 2 / 4 / -1 / 5;
 }
 .grad {
-   background-image: linear-gradient(hsl(239,89%,23%, 1),hsl(239,89%,23%, 0));
+  background-image: linear-gradient(hsl(239,89%,23%, 1),hsl(239,89%,23%, 0));
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 6;
 }
 .grad2 {
-   background-image: linear-gradient(hsl(239,89%,23%, 0),hsl(239,89%,23%, 1));
+  background-image: linear-gradient(hsl(239,89%,23%, 0),hsl(239,89%,23%, 1));
   grid-row-start: -2;
   grid-row-end: -1;
   grid-column-start: 1;
@@ -67,16 +74,28 @@ dl {
   font-family: "Prompt";
 }
 ol {
-  grid-area: 7 / 3 / 8 / 4;
+  grid-area: 9 / 3 / 10 / 4;
   font-family: "Prompt";
 }
 .h2a {
   grid-area: 4 / 3 / 5 / 4;
 }
 .h2b {
+  grid-area: 8 / 3 / 9 / 4;
+}
+.planets {
   grid-area: 6 / 3 / 7 / 4;
 }
-
+em {
+  grid-area: 7 / 3 / 8 / 4;
+  color: #777777;
+}
+a:not(hover) {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 </style>
 </head>
 <body>
@@ -122,6 +141,10 @@ ol {
     <li>Mars</li>
     <li>Mercury</li>
   </ol>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Planets2013-uk.svg"
+  alt="The Planets in the Solar System" width="500px" class="planets">
+  <em>Source: <a href="https://commons.wikimedia.org/wiki/File:Planets2013-uk.svg" target="_blank">Wikimedia Commons</a></em>
 </div>
+
 </body>
 </html>
